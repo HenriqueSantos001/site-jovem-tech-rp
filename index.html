@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <link href="./css/alunos.DPftOWvI.css" rel="stylesheet" />
+  <link href="./css/intlTelInput.css" rel="stylesheet" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jovem Tech RP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1c1c1c;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #f9f9fb;
+      margin: 16px auto;
+      padding: 14px 20px;
+      border-radius: 20px;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-container img {
+      height: 36px;
+    }
+
+    .logo-container span {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1c1c1c;
+      line-height: 1.2;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .login-button {
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .hamburger {
+      width: 24px;
+      height: 2px;
+      background: #1c1c1c;
+      position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: #1c1c1c;
+      position: absolute;
+      left: 0;
+    }
+
+    .hamburger::before {
+      top: -8px;
+    }
+
+    .hamburger::after {
+      top: 8px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(to right, #FF7033, #08D6FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 40px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #444;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    .tags button {
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 2px solid #dcdcdc;
+      background-color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tags button:hover {
+      background-color: #f5f5f5;
+    }
+
+    .tags .highlight {
+      background: linear-gradient(to right, #f52a6e, #f7832e);
+      color: white;
+      border: none;
+    }
+
+    /* MOBILE FIRST */
+    @media (max-width: 768px) {
+      header {
+        padding: 14px 16px;
+        border-radius: 16px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .logo-container img {
+        height: 60px;
+      }
+
+      .logo-container span {
+        font-size: 0.95rem;
+      }
+
+      .hero {
+        text-align: left;
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero h1 span {
+        display: block;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        text-align: left;
+      }
+
+      .tags {
+        justify-content: flex-start;
+      }
+
+      .tags button {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+    }
+
+    /* DESKTOP */
+    @media (min-width: 769px) {
+      .logo-container img {
+        height: 80px;
+      }
+
+      .logo-container span {
+        font-size: 1.4rem;
+      }
+    }
+
+    .bloco-especializacao {
+      padding: 30px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .titulo-bloco {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .descricao-bloco {
+      font-size: 1rem;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .cartoes-especializacao {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Cartão padrão */
+    .card {
+      border-radius: 24px;
+      padding: 32px 24px;
+      color: white;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .card button {
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Cores */
+    .card.cursos {
+      background: linear-gradient(to bottom right, #6236ff, #b620e0);
+    }
+
+    .card.profissoes {
+      background: linear-gradient(to bottom right, #f52a6e, #f7832e);
+    }
+
+    .card.destaque-ti {
+      background: linear-gradient(to bottom right, #2794b3, #6e6ef6);
+    }
+
+    .card .selo {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    /* Responsivo desktop */
+    @media (min-width: 768px) {
+      .cartoes-especializacao {
+        flex-direction: row;
+      }
+
+      .card {
+        flex: 1;
+        height: auto;
+      }
+    }
+
+
+    .carousel-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .carousel-section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .carousel-section p {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px 0;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 300px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    @media (min-width: 769px) {
+      .carousel-item img {
+      height: 280px;
+      object-fit: cover;
+      }
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    .carousel-btn.prev {
+      left: 10px;
+    }
+
+    .carousel-btn.next {
+      right: 10px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .carousel-item {
+        width: 85%;
+      }
+
+      .carousel-btn {
+        display: none;
+      }
+    }
+
+
+    .sessao-parceiros {
+      padding: 80px 20px;
+      background-color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sessao-parceiros h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .sessao-parceiros .descricao {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 48px;
+    }
+
+    .grid-parceiros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 28px;
+      justify-items: center;
+      align-items: center;
+      margin-bottom: 64px;
+      width: 100%;
+    }
+
+    .grid-parceiros img {
+      max-height: 40px;
+      max-width: 100px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: all 0.3s ease;
+    }
+
+    .grid-parceiros img:hover {
+      filter: none;
+    }
+
+    .bloco-garantia {
+      display: flex;
+      flex-direction: column;
+      background: #f7f7fb;
+      border-radius: 16px;
+      padding: 40px;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .bloco-garantia .texto {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+
+    .bloco-garantia h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .bloco-garantia p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .bloco-garantia button {
+      padding: 10px 18px;
+      background-color: white;
+      border: 2px solid #1c1c1c;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .bloco-garantia .depoimentos {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bloco-garantia .comentario {
+      background-color: white;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    /* DESKTOP: ajustes de centralização e largura */
+    @media (min-width: 1024px) {
+
+      .grid-parceiros,
+      .bloco-garantia {
+        max-width: 960px;
+      }
+
+      .bloco-garantia {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .bloco-garantia .texto {
+        flex: 1;
+        padding-right: 32px;
+      }
+
+      .bloco-garantia .depoimentos {
+        flex: 1;
+      }
+    }
+
+
+    .bloco-estatisticas {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    .card.estatistica {
+      flex: 1;
+      min-width: 260px;
+      max-width: 340px;
+      width: 100%;
+      padding: 32px 20px;
+      border-radius: 20px;
+      color: #fff;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .card.estatistica h3 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .card.estatistica.rosa {
+      background: linear-gradient(135deg, #d946ef, #fb7185);
+    }
+
+    .card.estatistica.azul {
+      background: linear-gradient(135deg, #22d3ee, #3b82f6);
+    }
+
+    .card.estatistica.roxo {
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+    }
+
+    .bloco-depoimentos {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .bloco-depoimentos h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .carousel-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      gap: 16px;
+      max-width: 100%;
+    }
+
+    .depoimento {
+      min-width: 240px;
+      max-width: 240px;
+      scroll-snap-align: center;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .carousel video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .carousel-container button {
+      background: #f43f5e;
+      border: none;
+      color: white;
+      font-size: 1.25rem;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card.estatistica {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .carousel-container button {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+
+      .carousel-container .prev {
+        left: 0;
+      }
+
+      .carousel-container .next {
+        right: 0;
+      }
+    }
+
+
+    header {
+      position: sticky;
+      top: 12px;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo-container" style="text-decoration: none;">
+      <img src="./images/logo_jovemtech.svg" alt="Jovem Tech RP Logo">
+      <span>Jovem<br>Tech RP</span>
+    </a>
+    <div class="menu-button">
+      <a href="login.html" class="login-button custom-hover" style="text-decoration: none; position: relative;">
+        <span class="login-text">Login</span>
+      </a>
+    </div>
+    <style>
+      .login-button.custom-hover {
+        position: relative;
+        overflow: hidden;
+        transition: color 0.3s cubic-bezier(.215, .61, .355, 1);
+        z-index: 1;
+      }
+
+      .login-button.custom-hover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #3f7af8, #8a53f7);
+        opacity: 0;
+        transition: opacity 0.35s cubic-bezier(.215, .61, .355, 1);
+        z-index: 0;
+      }
+
+      .login-button.custom-hover:hover::before {
+        opacity: 1;
+      }
+
+      .login-button.custom-hover .login-text {
+        position: relative;
+        z-index: 1;
+        /* Garante que o texto fique acima do ::before */
+      }
+
+      .login-button.custom-hover:hover .login-text {
+        color: #fff;
+      }
+    </style>
+  </header>
+
+  <section class="hero" style="text-align: left; display: flex; flex-direction: column; align-items: center;">
+    <div style="max-width: 700px; width: 100%;">
+      <h1><span>Jovem Tech RP</span> <br> Transforme o futuro <br> do seu filho <br> com as profissões que <br> mais
+        crescem no mundo</h1>
+      <p>O Programa Jovem Tech RP prepara jovens de 14 a 24 anos para se destacarem na área de tecnologia, com apoio
+        direto de empresas que contratam.
+        Aqui, o seu filho aprende, cresce e conquista o próprio caminho — com orgulho e independência.</p>
+      <div class="tags">
+        <span class="tag-style">Futuro</span>
+        <span class="tag-style">Propósito</span>
+        <span class="tag-style">Empregabilidade</span>
+        <span class="tag-style">Tecnologia</span>
+        <span class="tag-style">Currículo</span>
+        <span class="tag-style">Indicação</span>
+        <span class="tag-style">Preparação</span>
+        <span class="tag-style">Primeiro Emprego</span>
+        <button class="highlight whatsapp-btn"
+          style="background: linear-gradient(90deg, #25d366 0%, #128c7e 100%); color: #fff; border: none; display: flex; align-items: center; gap: 8px;">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="16" fill="white" opacity="0.15" />
+            <path
+              d="M16 6C10.477 6 6 10.477 6 16c0 1.624.43 3.162 1.18 4.484L6 26l5.684-1.16A9.94 9.94 0 0 0 16 26c5.523 0 10-4.477 10-10S21.523 6 16 6zm0 17.5c-1.47 0-2.857-.43-4.016-1.17l-.287-.18-3.377.69.69-3.29-.187-.3A8.47 8.47 0 0 1 7.5 16c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5zm4.13-6.14c-.226-.113-1.34-.66-1.547-.736-.207-.075-.358-.113-.51.113-.15.226-.585.736-.717.887-.132.15-.264.17-.49.057-.226-.113-.954-.352-1.818-1.122-.672-.6-1.126-1.34-1.26-1.566-.132-.226-.014-.348.1-.46.104-.104.226-.264.34-.396.113-.132.15-.226.226-.377.075-.15.038-.283-.019-.396-.057-.113-.51-1.23-.698-1.684-.184-.442-.372-.382-.51-.39-.132-.008-.283-.01-.434-.01-.15 0-.396.057-.604.283-.207.226-.79.773-.79 1.885 0 1.112.81 2.186.923 2.338.113.15 1.595 2.44 3.87 3.324.541.187.963.298 1.293.381.543.138 1.037.119 1.428.072.436-.052 1.34-.547 1.53-1.076.188-.528.188-.98.132-1.076-.057-.094-.207-.15-.434-.264z"
+              fill="#fff" />
+          </svg>
+          Fale no WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+  <style>
+    @media (min-width: 769px) {
+
+      .hero span,
+      .tags .tag-style,
+      .logo-container span {
+        font-size: 1.45em !important;
+      }
+    }
+  </style>
+
+  <style>
+    .tags .tag-style {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 999px;
+      border: 2px solid #dcdcdc;
+      background-color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: default;
+      transition: all 0.2s ease;
+      margin: 0;
+    }
+
+    .tags .whatsapp-btn {
+      background: linear-gradient(90deg, #25d366 0%, #128c7e 100%) !important;
+      color: #fff !important;
+      border: none !important;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px 0 rgba(18, 140, 126, 0.10);
+      transition: filter 0.2s;
+    }
+
+    .tags .whatsapp-btn:hover {
+      filter: brightness(1.08) saturate(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .tags .tag-style {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+
+      .tags .whatsapp-btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+
+  <section class="bloco-especializacao">
+    <h2 class="titulo-bloco">O que é o Programa Jovem Tech RP?</h2>
+    <p class="descricao-bloco">
+      Formação de verdade para o mercado que mais cresce no mundo
+    </p>
+
+    <div class="cartoes-especializacao">
+
+      <div class="card cursos">
+        <h3>Missão do Programa</h3>
+        <p>Preparamos jovens de 14 a 24 anos para conquistarem o primeiro emprego na área de tecnologia, desenvolvendo
+          habilidades práticas e comportamentais que o mercado realmente exige.
+          Aqui, o aluno aprende na prática, se desenvolve e entra no mercado com confiança, preparo e apoio.</p>
+      </div>
+
+      <div class="card profissoes">
+        <h3>Como funciona</h3>
+        <p>O aluno passa por uma trilha de formação onde aprende informática avançada, inteligência artificial, criação
+          de sites e ferramentas usadas por empresas renomadas.
+          Também recebe orientação para montar currículo, treinamento de entrevistas e comportamento profissional.
+          Tudo isso com apoio de empresas parceiras que contratam direto da escola.</p>
+      </div>
+
+      <div class="card destaque-ti">
+        <h3>Compromisso com o resultado</h3>
+        <p>Nosso compromisso é claro: se o aluno se dedicar, ele será contratado.
+          A formação foi construída com base nas exigências reais das empresas — e por isso temos resultados
+          comprovados.
+          Já temos alunos contratados com 1, 2 ou 3 meses de curso. E o próximo pode ser seu filho.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section class="carousel-section">
+    <h2>Garantimos a melhor experiência de aprendizagem</h2>
+    <p>Todos os nossos cursos são criados com base em pesquisas detalhadas sobre o mercado de trabalho. Primeiro,
+      descobrimos as habilidades mais demandadas e, em seguida, criamos o curso para garantir que nossos alunos cumpram
+      esses requisitos.</p>
+
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="scrollCarousel(-1)">❮</button>
+
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item"><img src="./images/img1.jpg" alt="Imagem 1"></div>
+        <div class="carousel-item"><img src="./images/img2.jpg" alt="Imagem 2"></div>
+        <div class="carousel-item"><img src="./images/img3.jpg" alt="Imagem 3"></div>
+        <div class="carousel-item"><img src="./images/img4.jpg" alt="Imagem 4"></div>
+        <div class="carousel-item"><img src="./images/img5.jpg" alt="Imagem 5"></div>
+        <div class="carousel-item"><img src="./images/img6.jpeg" alt="Imagem 5"></div>
+        <div class="carousel-item"><img src="./images/img7.jpg" alt="Imagem 5"></div>
+      </div>
+
+      <button class="carousel-btn next" onclick="scrollCarousel(1)">❯</button>
+    </div>
+  </section>
+
+  <section class="sessao-parceiros">
+    <div class="container">
+      <h2>Conteúdo do curso alinhado aos padrões de contratação <br> das maiores empresas do mercado</h2>
+      <p class="descricao">Nosso curso preparatório foi construído com base em processos seletivos e padrões exigidos
+        por empresas como essas:</p>
+
+      <div class="grid-parceiros">
+        <img src="./images/logo-parceiros/nestle.png" alt="Parceiro 1">
+        <img src="./images/logo-parceiros/pepsico.png" alt="Parceiro 2">
+        <img src="./images/logo-parceiros/itau.png" alt="Parceiro 3">
+        <img src="./images/logo-parceiros/bradesco.png" alt="Parceiro 4">
+        <img src="./images/logo-parceiros/mercantil.png" alt="Parceiro 5">
+        <img src="./images/logo-parceiros/santander.png" alt="Parceiro 6">
+        <img src="./images/logo-parceiros/natura.png" alt="Parceiro 7">
+        <img src="./images/logo-parceiros/7.png" alt="Parceiro 8">
+        <img src="./images/logo-parceiros/sumup.svg" alt="Parceiro 9">
+        <img src="./images/logo-parceiros/banco-do-brasil.png" alt="Parceiro 10">
+        <img src="./images/logo-parceiros/claro.png" alt="Parceiro 11">
+        <img src="./images/logo-parceiros/honda.png" alt="Parceiro 12">
+        <img src="./images/logo-parceiros/adobe.svg" alt="Parceiro 13">
+        <img src="./images/logo-parceiros/ifood.png" alt="Parceiro 14">
+      </div>
+
+      <div class="bloco-garantia">
+        <div class="texto">
+          <h3> Aqui, a proposta é clara, ou seu filho: <br> Conquista seu emprego<br>ou você recebe seu dinheiro de
+            volta</h3>
+          <p>90% dos alunos que completaram todas as condições do Programa de Empregabilidade ingressaram no mercado
+            dentro de 6 meses.</p>
+          <p>qualquer jovem que seguir nosso método e não conquistar seu emprego com o apoio do Programa de
+            Empregabilidade. Seu dinheiro será devolvido, como descrito no contrato.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bloco-estatisticas">
+    <div class="cards-container">
+      <div class="card estatistica rosa">
+        <h3>+ de 137 Jovens</h3>
+        <p>Foram contratados em poucos meses</p>
+      </div>
+      <div class="card estatistica azul">
+        <h3>87%</h3>
+        <p>dos jovens que passam pelo programa: Jovem Tech são contratados por empresas relevantes que oferecem plano de
+          carreira e um futuro promissor</p>
+      </div>
+      <div class="card estatistica roxo">
+        <h3>40</h3>
+        <p>empresas nos ajudam a desenvolver nossos programas de estudo de acordo com as necessidades do mercado de
+          trabalho</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    #video-carousel-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #video-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      overflow-x: hidden;
+      /* REMOVE barra de rolagem */
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 24px;
+      margin-bottom: 20px;
+    }
+
+    .video-box {
+      flex: 0 0 430px;
+      width: 430px;
+      max-width: 95vw;
+      aspect-ratio: 16/9;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      scroll-snap-align: start;
+    }
+
+    @media (max-width: 900px) {
+      .video-box {
+        flex: 0 0 90vw;
+        width: 90vw;
+        min-width: 270px;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    /* Botões de navegação */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      background: #FF3C2F;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0.9;
+      transition: background 0.2s, opacity 0.2s;
+      font-size: 28px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+      outline: none;
+    }
+
+    .carousel-btn:hover {
+      background: #e05c5c;
+      opacity: 1;
+    }
+
+    .carousel-btn.left {
+      left: -60px;
+    }
+
+    .carousel-btn.right {
+      right: -60px;
+    }
+
+    @media (max-width: 600px) {
+      .carousel-btn.left {
+        left: 2px;
+      }
+
+      .carousel-btn.right {
+        right: 2px;
+      }
+
+      .video-box {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+
+
+
+
+  <h2 style="text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 24px; background: linear-gradient(to right, #000000, #08D6FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+    Cada relato, uma nova conquista <br> Veja o que as famílias estão conquistando
+  </h2>
+    <section class="testimonials mt-[32px] md:mt-[40px]" style="display: flex; flex-direction: column; align-items: center; position: relative; max-width: 700px; margin: 0 auto;">
+      <button class="testimonial-arrow left" onclick="moveTestimonial(-1)" aria-label="Anterior" style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background: #FF7033; border: none; border-radius: 50%; width: 40px; height: 40px; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;">
+        &#8592;
+      </button>
+      <div id="testimonial-carousel" style="width: 100%; overflow: hidden;">
+        <div class="testimonial-track" style="display: flex; transition: transform 0.5s cubic-bezier(.4,0,.2,1); will-change: transform;">
+          <!-- Depoimento 1 -->
+          <div class="testimonial" style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
+            <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
+              <iframe
+                src="https://www.youtube.com/embed/Fkzpq6tYuuI?controls=0&amp;modestbranding=1&amp;rel=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
+              </iframe>
+            </div>
+            <p style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
+              Roberta - Mãe da nossa aluna
+            </p>
+            <h3 style="text-align: center; margin-top: 12px;">Hoje minha filha trabalha no São Francisco e tem um futuro brilhante pela frente.</h3>
+          </div>
+          <!-- Depoimento 2 -->
+          <div class="testimonial" style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
+            <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
+              <iframe
+                src="https://www.youtube.com/embed/0RHFbHDLXk8?controls=0&amp;modestbranding=1&amp;rel=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
+              </iframe>
+            </div>
+            <p style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
+              Manuela - Mãe da nossa aluna
+            </p>
+            <h3 style="text-align: center; margin-top: 12px;">Ver minha filha contratada pelo Itaú me deu uma paz no coração.</h3>
+          </div>
+          <!-- Depoimento 3 -->
+          <div class="testimonial" style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
+            <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
+              <iframe
+                src="https://www.youtube.com/embed/vx0cEvp_N9g?controls=0&amp;modestbranding=1&amp;rel=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
+              </iframe>
+            </div>
+            <p style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
+              Rebeca, 16 anos — Contratada pelo Bradesco
+            </p>
+            <h3 style="text-align: center; margin-top: 12px;">Entrei perdida, hoje trabalho no Bradesco e tenho orgulho do meu caminho.</h3>
+          </div>
+        </div>
+      </div>
+      <button class="testimonial-arrow right" onclick="moveTestimonial(1)" aria-label="Próximo" style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background: #FF7033; border: none; border-radius: 50%; width: 40px; height: 40px; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;">
+        &#8594;
+      </button>
+      <!-- Botão "Ver mais feedbacks" -->
+      <a href="clientes.html" class="ver-mais-feedbacks-btn" style="margin-top: 32px; display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 999px; background: linear-gradient(90deg, #08D6FF 0%, #FF7033 100%); color: #fff; font-weight: 700; font-size: 1.1rem; box-shadow: 0 2px 12px 0 rgba(118,71,236,0.10); border: none; text-decoration: none; transition: filter 0.18s, box-shadow 0.18s;">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M13.172 12l-4.95-4.95a1 1 0 111.414-1.414l6.364 6.364a1 1 0 010 1.414l-6.364 6.364a1 1 0 11-1.414-1.414L13.172 12z" fill="#fff"/></svg>
+        Ver todos os relatos
+      </a>
+      <style>
+        .ver-mais-feedbacks-btn:hover, .ver-mais-feedbacks-btn:focus {
+          filter: brightness(1.08) saturate(1.2);
+          box-shadow: 0 4px 18px 0 rgba(118,71,236,0.18);
+          text-decoration: none;
+          color: #fff;
+        }
+        @media (max-width: 600px) {
+          .ver-mais-feedbacks-btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 1rem;
+            padding: 12px 0;
+          }
+        }
+      </style>
+    </section>
+
+
+  <script>
+    // Carrossel de depoimentos
+    let testimonialIndex = 0;
+    const testimonialTrack = document.querySelector('.testimonial-track');
+    const testimonials = document.querySelectorAll('.testimonial-track .testimonial');
+    function updateTestimonialCarousel() {
+      testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+    }
+    function moveTestimonial(dir) {
+      testimonialIndex += dir;
+      if (testimonialIndex < 0) testimonialIndex = testimonials.length - 1;
+      if (testimonialIndex >= testimonials.length) testimonialIndex = 0;
+      updateTestimonialCarousel();
+    }
+    // Responsividade: esconde setas no mobile
+    function handleTestimonialArrows() {
+      const left = document.querySelector('.testimonial-arrow.left');
+      const right = document.querySelector('.testimonial-arrow.right');
+      if (window.innerWidth < 600) {
+        left.style.display = 'none';
+        right.style.display = 'none';
+      } else {
+        left.style.display = 'flex';
+        right.style.display = 'flex';
+      }
+    }
+    window.addEventListener('resize', handleTestimonialArrows);
+    handleTestimonialArrows();
+  </script>
+
+
+
+
+
+  <script>
+    function scrollCarousel(direction) {
+      const track = document.getElementById("carousel-track");
+      const scrollAmount = track.clientWidth * 0.9;
+      track.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+  <footer
+    style="background-color: #f9f8fc; padding: 40px 20px; border-radius: 20px; font-family: 'Inter', sans-serif; max-width: 1280px; margin: 40px auto;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+      <!-- Coluna 1 -->
+      <div style="flex: 1 1 220px; min-width: 220px;">
+        <div class="logo-container">
+          <a href="#" style="display: inline-block;">
+            <img src="./images/logo_jovemtech.svg" alt="Jovem Tech RP Logo">
+          </a>
+          <a href="#"
+            style="font-weight: 700; font-size: 1.4rem; color: #1c1c1c; line-height: 1.2; text-decoration: none;">
+            Jovem<br>Tech RP
+          </a>
+        </div>
+        <p style="font-size: 12px; color: #444;">Cursos Preparatórios <br> para o Mercado de Trabalho Tecnológico</p>
+      </div>
+
+      <!-- Coluna 2 -->
+      <div style="flex: 1 1 120px; min-width: 120px;">
+        <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px;">Áreas Profissionais</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #444;">
+          <li>Assistente Administrativo / Financeiro</li>
+          <li>Desenvolvedor Web</li>
+          <li>Analista de Dados / Auxiliar de BI</li>
+          <li>Suporte Técnico / Auxiliar de TI</li>
+          <li>Marketing Digital Técnico / Operacional</li>
+          <li>Auxiliar de Recursos Humanos</li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3 -->
+      <div style="flex: 1 1 120px; min-width: 120px;">
+        <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px;">Sobre</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #444;">
+          <li>Jovem Tech RP</li>
+          <li>Centro de Carreiras</li>
+          <li>Nossos Alunos</li>
+        </ul>
+      </div>
+      
+            <!-- Coluna 4 -->
+      <div style="flex: 1 1 120px; min-width: 120px;">
+        <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px;">Triagem</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #444;">
+          <li>O que é triagem?</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr style="margin: 32px 0; border: none; border-top: 1px solid #ddd;">
+
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; font-size: 13px; color: #444;">
+      <div>
+        <strong>WhatsApp</strong><br>
+        <a href="https://api.whatsapp.com/send/?phone=5516991002036&text=Ol%C3%A1%2C+vim+do+site+JovemTechRP+e+tenho+interesse+no+programa.&type=phone_number&app_absent=0"
+          style="text-decoration: none; color: #1c1c1c;">+55 (16) 99100-2036</a>
+      </div>
+      <div>
+        <strong>Telefone</strong><br>
+        <span>+55 (16) 99100-2036</span>
+      </div>
+      <div>
+        <strong>E-mail</strong><br>
+        <a href="mailto:contato@jovemtechrp.com"
+          style="text-decoration: none; color: #1c1c1c;">contato@jovemtechrp.com</a>
+      </div>
+      <div style="margin-left: auto; display: flex; gap: 16px; font-size: 18px;">
+        <a href="https://www.instagram.com/jovemtechrp/"><img src="./icons/ig.svg" alt="Instagram"></a>
+        <img src="./icons/fb.svg" alt="YouTube">
+        <img src="./icons/yt.svg" alt="Facebook">
+        <img src="./icons/ld.svg" alt="LinkedIn">
+      </div>
+    </div>
+    <div style="margin-top: 20px; font-size: 11px; color: #888; text-align: left;">
+      Jovem Tech RP | R. Cmte. Marcondes Salgado, 1251 - Sala 1 - Centro, Ribeirão Preto - SP, 14010-150<br>
+      Este site é protegido por reCAPTCHA e a Política de Privacidade e os Termos de Serviço do Google se aplicam.
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
