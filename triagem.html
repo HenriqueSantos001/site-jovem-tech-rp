@@ -107,7 +107,7 @@
     }
 
     .hero h1 span {
-      background: linear-gradient(to right, #fb5b31, #2474f6);
+      background: linear-gradient(to right, #FF7033, #08D6FF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -228,6 +228,19 @@
       line-height: 1.6;
     }
 
+    .descricao-bloco2 {
+      font-size: 20px;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      background: linear-gradient(90deg, #dfdfdf 60%, #dfdfdf 100%);
+      border-radius: 6px;
+      padding: 8px 12px;
+      box-decoration-break: clone;
+      display: inline-block;
+    }
+
     .cartoes-especializacao {
       display: flex;
       flex-direction: column;
@@ -238,7 +251,7 @@
     .card {
       border-radius: 24px;
       padding: 32px 24px;
-      color: rgb(0, 0, 0);
+      color: white;
       text-align: left;
       display: flex;
       flex-direction: column;
@@ -268,15 +281,15 @@
 
     /* Cores */
     .card.cursos {
-      background: linear-gradient(to bottom right, #00affd, #2474f6);
+      background: linear-gradient(to bottom right, #6236ff, #b620e0);
     }
 
     .card.profissoes {
-      background: linear-gradient(to bottom right, #fb5b31, #a152ad);
+      background: linear-gradient(to bottom right, #f52a6e, #f7832e);
     }
 
     .card.destaque-ti {
-      background: linear-gradient(to bottom right, #9c53b1, #2f67f2);
+      background: linear-gradient(to bottom right, #2794b3, #6e6ef6);
     }
 
     .card .selo {
@@ -320,7 +333,7 @@
 
     .carousel-container {
       position: relative;
-      overflow: visible;
+      overflow: hidden;
     }
 
     .carousel-track {
@@ -371,11 +384,11 @@
     }
 
     .carousel-btn.prev {
-      left: -70px;
+      left: 10px;
     }
 
     .carousel-btn.next {
-      right: -70px;
+      right: 10px;
     }
 
     /* Responsividade */
@@ -391,7 +404,6 @@
 
 
     .sessao-parceiros {
-      padding: 80px 20px;
       background-color: #fff;
       text-align: center;
       display: flex;
@@ -539,15 +551,15 @@
     }
 
     .card.estatistica.rosa {
-      background: linear-gradient(135deg, #00affd, #2474f6);
+      background: linear-gradient(135deg, #d946ef, #fb7185);
     }
 
     .card.estatistica.azul {
-      background: linear-gradient(135deg, #fb5b31, #a152ad);
+      background: linear-gradient(135deg, #22d3ee, #3b82f6);
     }
 
     .card.estatistica.roxo {
-      background: linear-gradient(135deg, #9c53b1, #2f67f2);
+      background: linear-gradient(135deg, #6366f1, #a855f7);
     }
 
     .bloco-depoimentos {
@@ -593,7 +605,7 @@
     }
 
     .carousel-container button {
-      background: linear-gradient(#fb5b31, #a152ad);
+      background: #f43f5e;
       border: none;
       color: white;
       font-size: 1.25rem;
@@ -641,13 +653,13 @@
 
 <body>
   <header>
-    <a href="#" class="logo-container" style="text-decoration: none;">
+    <a href="./index.html" class="logo-container" style="text-decoration: none;">
       <img src="./images/logo_jovemtech.svg" alt="Jovem Tech RP Logo">
       <span>Jovem<br>Tech RP</span>
     </a>
     <div class="menu-button">
-      <a href="login.html" class="login-button custom-hover" style="text-decoration: none; position: relative;">
-        <span class="login-text">Login</span>
+      <a href="./index.html" class="login-button custom-hover" style="text-decoration: none; position: relative;">
+        <span class="login-text">Início</span>
       </a>
     </div>
     <style>
@@ -684,34 +696,12 @@
     </style>
   </header>
 
-  <section class="hero" style="text-align: left; display: flex; flex-direction: column; align-items: center;">
-    <div style="max-width: 700px; width: 100%;">
-      <h1><span>Jovem Tech RP</span> <br> Transforme o futuro <br> do seu filho <br> com as profissões que <br> mais
-        crescem no mundo</h1>
-      <p>O Programa Jovem Tech RP prepara jovens de 14 a 24 anos para se destacarem na área de tecnologia, com apoio
-        direto de empresas que contratam.
-        Aqui, o seu filho aprende, cresce e conquista o próprio caminho — com orgulho e independência.</p>
-      <div class="tags">
-        <span class="tag-style">Futuro</span>
-        <span class="tag-style">Propósito</span>
-        <span class="tag-style">Empregabilidade</span>
-        <span class="tag-style">Tecnologia</span>
-        <span class="tag-style">Currículo</span>
-        <span class="tag-style">Indicação</span>
-        <span class="tag-style">Preparação</span>
-        <span class="tag-style">Primeiro Emprego</span>
-        <button class="highlight whatsapp-btn"
-          style="background: linear-gradient(90deg, #25d366 0%, #128c7e 100%); color: #fff; border: none; display: flex; align-items: center; gap: 8px;">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="16" fill="white" opacity="0.15" />
-            <path
-              d="M16 6C10.477 6 6 10.477 6 16c0 1.624.43 3.162 1.18 4.484L6 26l5.684-1.16A9.94 9.94 0 0 0 16 26c5.523 0 10-4.477 10-10S21.523 6 16 6zm0 17.5c-1.47 0-2.857-.43-4.016-1.17l-.287-.18-3.377.69.69-3.29-.187-.3A8.47 8.47 0 0 1 7.5 16c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5zm4.13-6.14c-.226-.113-1.34-.66-1.547-.736-.207-.075-.358-.113-.51.113-.15.226-.585.736-.717.887-.132.15-.264.17-.49.057-.226-.113-.954-.352-1.818-1.122-.672-.6-1.126-1.34-1.26-1.566-.132-.226-.014-.348.1-.46.104-.104.226-.264.34-.396.113-.132.15-.226.226-.377.075-.15.038-.283-.019-.396-.057-.113-.51-1.23-.698-1.684-.184-.442-.372-.382-.51-.39-.132-.008-.283-.01-.434-.01-.15 0-.396.057-.604.283-.207.226-.79.773-.79 1.885 0 1.112.81 2.186.923 2.338.113.15 1.595 2.44 3.87 3.324.541.187.963.298 1.293.381.543.138 1.037.119 1.428.072.436-.052 1.34-.547 1.53-1.076.188-.528.188-.98.132-1.076-.057-.094-.207-.15-.434-.264z"
-              fill="#fff" />
-          </svg>
-          Fale no WhatsApp
-        </button>
-      </div>
-    </div>
+  <section class="hero" style=" display: flex; flex-direction: column; align-items: center;">
+    <h2 class="titulo-bloco">A importância da triagem de currículos</h2>
+    <div class="block_image block_image_wide mask1"> <img width="1208" height="520" src="./images/image1-triagem.png"
+        class="attachment-full size-full wp-post-image" alt="Desenvolvimento pessoal" decoding="async"
+        srcset="./images/image1-triagem.png 1208w, ./images/image1-triagem-300x129.png 300w, ./images/image1-triagem-1024x441.png 1024w, ./images/image1-triagem-768x331.png 768w"
+        sizes="(max-width: 1208px) 100vw, 1208px"> </a> </div>
   </section>
   <style>
     @media (min-width: 769px) {
@@ -766,190 +756,132 @@
   </style>
 
   <section class="bloco-especializacao">
-    <h2 class="titulo-bloco">O que é o Programa Jovem Tech RP?</h2>
-    <p class="descricao-bloco">
-      Formação de verdade para o mercado que mais cresce no mundo
-    </p>
+    <h2 class="titulo-bloco"
+      style="background: linear-gradient(to right, #7157d0, #fd5d38); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+      O que é triagem de currículos?<br>Para que serve?<br>Por que é tão importante?
+    </h2>
 
-    <div class="cartoes-especializacao">
+    <div class="container" style="display: flex; justify-content: center;">
+      <div class="bloco-garantia">
+        <div class="texto">
+          <p style="text-align: left; font-size: 1.40em; line-height: 1.7;">Quando vocês chegam aqui na Escola Santos
+            Tech, através do programa social de empregabilidade Jovem Tech, muitos
+            pais acreditam que seus filhos já estão vindo direto para uma vaga de emprego.<br><br>
 
-      <div class="card cursos" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>Missão do Programa</h3>
-        <p>Preparamos jovens de 14 a 24 anos para conquistarem o primeiro emprego na área de tecnologia, desenvolvendo
-          habilidades práticas e comportamentais que o mercado realmente exige.
-          Aqui, o aluno aprende na prática, se desenvolve e entra no mercado com confiança, preparo e apoio.</p>
+            Quando na realidade trata-se de indicações para empresas que temos parcerias.<br><br>
+            Mas antes de qualquer indicação existe um passo muito importante chamado
+            TRIAGEM — e vamos explicar para vocês por que isso é tão essencial para o futuro profissional dele.</p>
+        </div>
       </div>
+    </div>
 
-      <div class="card profissoes" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>Como funciona</h3>
-        <p>O aluno passa por uma trilha de formação onde aprende informática avançada, inteligência artificial, CRM's e
-          ferramentas usadas por empresas renomadas.
-          Também recebe orientação para montar currículo, treinamento de entrevistas e comportamento profissional.
-          Tudo isso com apoio de empresas parceiras que contratam direto da escola.</p>
+    <section class="hero" style=" display: flex; flex-direction: column; align-items: center;">
+      <h2 class="titulo-bloco"
+        style="background: linear-gradient(to right, #000000, #00c4f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+        O que é TRIAGEM?
+      </h2>
+      <div>
+        <img width="1208" height="520" src="./images/triagem-de-curriculo.jpg"
+          class="attachment-full size-full wp-post-image" alt="Desenvolvimento pessoal" decoding="async"
+          srcset="./images/triagem-de-curriculo.jpg, ./images/triagem-de-curriculo.jpg 300w, ./images/triagem-de-curriculo.jpg 1024w, ./images/triagem-de-curriculo.jpg 768w"
+          sizes="(max-width: 1208px) 100vw, 1208px"
+          style="box-shadow: 0 4px 24px rgba(0,0,0,0.55); border-radius: 12px;">
       </div>
+    </section>
 
-      <div class="card destaque-ti" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>Compromisso com o resultado</h3>
-        <p>Nosso compromisso é claro: se o aluno se dedicar, ele será contratado.
-          A formação foi construída com base nas exigências reais das empresas — e por isso temos resultados
-          comprovados.
-          Já temos alunos contratados com 1, 2 ou 3 meses de curso. E o próximo pode ser seu filho.</p>
+    <div class="container">
+
+      <div class="bloco-garantia" style="margin-left: auto; margin-right: auto;">
+        <div class="texto">
+          <h3>A triagem é como se fosse uma “primeira avaliação”.</h3>
+          <ul style="text-align: left; font-size: 1.30em; line-height: 1.7; margin-bottom: 24px; padding-left: 18px;">
+            <li>É o momento em que a gente conversa com o jovem, analisa as informações dele (como estudos,
+              conhecimentos e
+              experiências) e identifica quais vagas já combinam com o perfil dele hoje.<br><br>
+
+              Ela é feita com cuidado para garantir que ele só se candidate a vagas para as quais ele realmente tem
+              condições de
+              atender aos requisitos.</li>
+          </ul>
+        </div>
       </div>
-
     </div>
   </section>
+
+
 
 
 
 
   <section class="carousel-section">
-    <h2>Garantimos a melhor experiência de aprendizagem</h2>
-    <p>Todos os nossos cursos são criados com base em pesquisas detalhadas sobre o mercado de trabalho. Primeiro,
-      descobrimos as habilidades mais demandadas e, em seguida, criamos o curso para garantir que nossos alunos cumpram
-      esses requisitos.</p>
+    <h2 class="titulo-bloco"
+      style="background: linear-gradient(to right, #000000, #00c4f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+      Para que serve a TRIAGEM?
+    </h2>
 
-    <div class="carousel-container">
-      <!-- Botão para rolar o carrossel para a esquerda -->
-      <button class="carousel-btn prev" onclick="scrollCarousel(-1)">❮</button>
-
-      <!-- Faixa que contém todos os itens do carrossel -->
-      <div class="carousel-track" id="carousel-track">
-        <!-- Cada item do carrossel representa uma imagem -->
-        <div class="carousel-item"><img src="./images/img1.jpg" alt="Imagem 1"></div>
-        <div class="carousel-item"><img src="./images/img2.jpg" alt="Imagem 2"></div>
-        <div class="carousel-item"><img src="./images/img3.jpg" alt="Imagem 3"></div>
-        <div class="carousel-item"><img src="./images/img4.jpg" alt="Imagem 4"></div>
-        <div class="carousel-item"><img src="./images/img5.jpg" alt="Imagem 5"></div>
-        <div class="carousel-item"><img src="./images/img6.jpeg" alt="Imagem 6"></div>
-        <div class="carousel-item"><img src="./images/img7.jpg" alt="Imagem 7"></div>
-      </div>
-
-      <!-- Botão para rolar o carrossel para a direita -->
-      <button class="carousel-btn next" onclick="scrollCarousel(1)">❯</button>
+    <div>
+      <img width="1208" height="520" src="./images/Triagem-de-curriculo2.jpg"
+        class="attachment-full size-full wp-post-image" alt="Desenvolvimento pessoal" decoding="async"
+        srcset="./images/Triagem-de-curriculo2.jpg, ./images/Triagem-de-curriculo2.jpg 300w, ./images/Triagem-de-curriculo2.jpg 1024w, ./images/Triagem-de-curriculo2.jpg 768w"
+        sizes="(max-width: 1208px) 100vw, 1208px" style="box-shadow: 0 4px 24px rgba(0,0,0,0.55); border-radius: 12px;">
     </div>
-    <style>
-      /* 
-        .carousel-section: Seção principal do carrossel, define padding, largura máxima e centralização.
-      */
-      .carousel-section {
-        /* já definido no CSS global */
-      }
 
-      /* 
-        .carousel-container: Container do carrossel, posiciona os botões e a faixa de imagens.
-      */
-      .carousel-container {
-        /* já definido no CSS global */
-      }
-
-      /* 
-        .carousel-track: Faixa flexível que contém os itens do carrossel e permite rolagem horizontal.
-      */
-      .carousel-track {
-        /* já definido no CSS global */
-      }
-
-      /* 
-        .carousel-item: Cada item do carrossel, define largura e arredondamento.
-        Aqui aumentamos a largura para 600px.
-      */
-      .carousel-item {
-        width: 600px !important;
-        /* aumenta ainda mais a largura do item */
-        border-radius: 16px;
-        overflow: hidden;
-        flex: 0 0 auto;
-      }
-
-      /* 
-        .carousel-item img: Imagem dentro do item, define altura, largura, preenchimento e borda arredondada.
-        Aqui aumentamos a altura para 480px.
-      */
-      .carousel-item img {
-        height: 480px !important;
-        /* aumenta ainda mais a altura da imagem */
-        width: 100% !important;
-        object-fit: cover;
-        border-radius: 16px;
-        display: block;
-      }
-
-      /* 
-        .carousel-btn: Botões de navegação do carrossel, posicionados nas laterais.
-      */
-      .carousel-btn {
-        /* já definido no CSS global */
-      }
-
-      /* 
-        Responsividade para telas menores: reduz largura e altura das imagens.
-      */
-      @media (max-width: 768px) {
-        .carousel-item {
-          width: 98vw !important;
-        }
-
-        .carousel-item img {
-          height: 260px !important;
-        }
-      }
-    </style>
   </section>
 
   <section class="sessao-parceiros">
     <div class="container">
-      <h2>Conteúdo do curso alinhado aos padrões de contratação <br> das maiores empresas do mercado</h2>
-      <p class="descricao">O nosso curso preparatório é construído com base em processos seletivos e padrões exigidos
-        por empresas como essas:</p>
 
-      <div class="grid-parceiros">
-        <img src="./images/logo-parceiros/nestle.png" alt="Parceiro 1">
-        <img src="./images/logo-parceiros/pepsico.png" alt="Parceiro 2">
-        <img src="./images/logo-parceiros/itau.png" alt="Parceiro 3">
-        <img src="./images/logo-parceiros/bradesco.png" alt="Parceiro 4">
-        <img src="./images/logo-parceiros/mercantil.png" alt="Parceiro 5">
-        <img src="./images/logo-parceiros/santander.png" alt="Parceiro 6">
-        <img src="./images/logo-parceiros/natura.png" alt="Parceiro 7">
-        <img src="./images/logo-parceiros/7.png" alt="Parceiro 8">
-        <img src="./images/logo-parceiros/sumup.svg" alt="Parceiro 9">
-        <img src="./images/logo-parceiros/banco-do-brasil.png" alt="Parceiro 10">
-        <img src="./images/logo-parceiros/claro.png" alt="Parceiro 11">
-        <img src="./images/logo-parceiros/honda.png" alt="Parceiro 12">
-        <img src="./images/logo-parceiros/adobe.svg" alt="Parceiro 13">
-        <img src="./images/logo-parceiros/ifood.png" alt="Parceiro 14">
-      </div>
-
-      <div class="bloco-garantia">
+      <div class="bloco-garantia" style="margin-left:auto; margin-right:auto; display:table;">
         <div class="texto">
-          <h3> Aqui, a proposta é clara, ou seu filho: <br> Conquista seu emprego<br>ou você recebe seu dinheiro de
-            volta</h3>
-          <p>90% dos alunos que completaram todas as condições do Programa de Empregabilidade ingressaram no mercado
-            dentro de 6 meses.</p>
-          <p>qualquer jovem que seguir nosso método e não conquistar seu emprego com o apoio do Programa de
-            Empregabilidade. Seu dinheiro será devolvido, como descrito no contrato.</p>
+          <h3>A triagem tem um objetivo muito claro:</h3>
+          <ul style="text-align: left; font-size: 1.30em; line-height: 1.7; margin-bottom: 24px; padding-left: 18px;">
+            <li>1º Evitar que o jovem se candidate a vagas para as quais ainda não está preparado.</li><br>
+            <li>2º Proteger o nome dele no mercado, já que se ele se candidata sem atender aos requisitos, ele fica marcado
+              no banco de dados da empresa como “não qualificado”.</li><br>
+            <li>3º Direcionar o jovem para as vagas certas, onde ele tem mais chances de ser contratado.</li>
+          </ul>
+          <p style="text-align: left; font-size: 1.30em; line-height: 1.7;">
+            Muita gente não sabe, mas quando uma empresa recebe um candidato sem as habilidades ou conhecimentos
+            exigidos para a vaga, ela registra esse candidato como inadequado no sistema dela — o que atrapalha
+            futuras tentativas dele naquela empresa.<br>
+            Por isso, a triagem ajuda a evitar esse erro e aumenta as chances de sucesso desde a primeira tentativa.
+          </p>
         </div>
-
       </div>
+
     </div>
   </section>
 
 
-  <section class="bloco-estatisticas">
-    <div class="cards-container">
-      <div class="card estatistica rosa" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>+ de 137 Jovens</h3>
-        <p>Foram contratados em poucos meses</p>
+  <section class="hero" style=" display: flex; flex-direction: column; align-items: center;">
+    <h2 class="titulo-bloco"
+      style="background: linear-gradient(to right, #000000, #00c4f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+      Por que a TRIAGEM é importante?
+    </h2>
+    <div class="block_image block_image_wide mask1"> <img width="1208" height="520"
+        src="./images/triagem-importante2.png" class="attachment-full size-full wp-post-image"
+        alt="Desenvolvimento pessoal" decoding="async"
+        srcset="./images/triagem-importante2.png 1208w, ./images/triagem-importante2 300w, ./images/triagem-importante2 1024w, ./images/triagem-importante2 768w"
+        sizes="(max-width: 1208px) 100vw, 1208px"> </div>
+  </section>
+
+  <section class="sessao-parceiros">
+    <div class="container">
+
+      <div class="bloco-garantia" style="margin-left:auto; margin-right:auto; display:table;">
+        <div class="texto">
+          <h3>Muitos jovens chegam inseguros, sem currículo, sem experiência, e sem saber para onde ir.
+            A triagem é fundamental para:</h3>
+          <ul style="text-align: left; font-size: 1.30em; line-height: 1.7; margin-bottom: 24px; padding-left: 18px;">
+            <li>🕒 Economizar tempo, já focando nas vagas certas para o perfil atual dele.</li><br>
+            <li>🎯 Aumentar as chances de contratação, já que ele vai para vagas para as quais ele realmente tem
+              condições de ser aceito.</li><br>
+            <li>💡 Proteger a imagem dele no mercado, evitando queimar o nome por candidaturas erradas.</li>
+          </ul>
+        </div>
+
       </div>
-      <div class="card estatistica azul" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>87%</h3>
-        <p>dos jovens que passam pelo programa: Jovem Tech são contratados por empresas relevantes que oferecem plano de
-          carreira e um futuro promissor</p>
-      </div>
-      <div class="card estatistica roxo" style="box-shadow: 0 1px 6px rgba(32,33,36,0.28);">
-        <h3>40</h3>
-        <p>empresas nos ajudam a desenvolver nossos programas de estudo de acordo com as necessidades do mercado de
-          trabalho</p>
-      </div>
+
     </div>
   </section>
 
@@ -1020,7 +952,7 @@
     }
 
     .carousel-btn:hover {
-      background: linear-gradient(90deg, #a152ad, #fb5b31);
+      background: #e05c5c;
       opacity: 1;
     }
 
@@ -1047,115 +979,50 @@
     }
   </style>
 
-
-
-
-
   <h2
-    style="text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 24px; background: linear-gradient(to right, #46b9ff, #203134); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
-    Cada relato, uma nova conquista <br> Veja o que as famílias estão conquistando
+    style="text-align: center; font-size: 2rem; font-weight: 700; margin-top: 24px; margin-bottom: 24px; background: linear-gradient(to right, #000000, #00c4f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+    O que acontece depois da TRIAGEM?
   </h2>
-  <section class="testimonials mt-[32px] md:mt-[40px]"
-    style="display: flex; flex-direction: column; align-items: center; position: relative; max-width: 700px; margin: 0 auto;">
-    <button class="testimonial-arrow left" onclick="moveTestimonial(-1)" aria-label="Anterior"
-      style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); background: linear-gradient(90deg, #46b9ff 0%, #203134 100%); border: none; border-radius: 50%; width: 40px; height: 40px; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; transition: background 0.2s;">
-      ❮
-    </button>
 
-    <div id="testimonial-carousel" style="width: 100%; overflow: hidden;">
-      <div class="testimonial-track"
-        style="display: flex; transition: transform 0.5s cubic-bezier(.4,0,.2,1); will-change: transform;">
-        <!-- Depoimento 1 -->
-        <div class="testimonial"
-          style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
-          <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
-            <iframe src="https://www.youtube.com/embed/Fkzpq6tYuuI?controls=0&amp;modestbranding=1&amp;rel=0"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-              style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
-            </iframe>
-          </div>
-          <p
-            style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
-            Roberta - Mãe da nossa aluna
-          </p>
-          <h3 style="text-align: center; margin-top: 12px;">Hoje minha filha trabalha no São Francisco e tem um futuro
-            brilhante pela frente.</h3>
+  <section class="sessao-parceiros">
+    <div class="container">
+
+      <div class="bloco-garantia" style="margin-left:auto; margin-right:auto; display:table;">
+        <div class="texto">
+          <h3>Depois que fazemos a triagem, o jovem já fica sabendo quais vagas são compatíveis com o perfil dele no
+            momento.</h3>
+          <p style="text-align: left; font-size: 1.30em; line-height: 1.7;">
+            Ele e o orientador analisam juntos as opções disponíveis e, a partir daí, ele já pode aplicar para essas
+            vagas — de forma mais segura, consciente e estratégica.</p>
         </div>
-        <!-- Depoimento 2 -->
-        <div class="testimonial"
-          style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
-          <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
-            <iframe src="https://www.youtube.com/embed/0RHFbHDLXk8?controls=0&amp;modestbranding=1&amp;rel=0"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-              style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
-            </iframe>
-          </div>
-          <p
-            style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
-            Manuela - Mãe da nossa aluna
-          </p>
-          <h3 style="text-align: center; margin-top: 12px;">Ver minha filha contratada pelo Itaú me deu uma paz no
-            coração.</h3>
-        </div>
-        <!-- Depoimento 3 -->
-        <div class="testimonial"
-          style="display: flex; flex-direction: column; align-items: center; min-width: 100%; max-width: 600px; width: 100%;">
-          <div class="video-wrapper" style="width: 100%; display: flex; justify-content: center;">
-            <iframe src="https://www.youtube.com/embed/vx0cEvp_N9g?controls=0&amp;modestbranding=1&amp;rel=0"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-              style="width: 100%; max-width: 600px; aspect-ratio: 16/9; border-radius: 12px; background: #000;">
-            </iframe>
-          </div>
-          <p
-            style="background: #191920; color: #FF7033; padding: 2px 6px; border-radius: 8px; display: inline-block; margin-top: 16px;">
-            Rebeca, 16 anos — Contratada pelo Bradesco
-          </p>
-          <h3 style="text-align: center; margin-top: 12px;">Entrei perdida, hoje trabalho no Bradesco e tenho orgulho do
-            meu caminho.</h3>
-        </div>
+
       </div>
+
     </div>
-    <button class="testimonial-arrow right" onclick="moveTestimonial(1)" aria-label="Próximo"
-      style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); background: linear-gradient(90deg, #46b9ff 0%, #203134 100%); border: none; border-radius: 50%; width: 40px; height: 40px; color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; transition: background 0.2s;">
-      ❯
-    </button>
-
-    <!-- Botão "Ver mais feedbacks" -->
-    <a href="clientes.html" class="ver-mais-feedbacks-btn"
-      style="margin-top: 32px; display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 999px; background: linear-gradient(90deg, #46b9ff 0%, #203134 100%); color: #fff; font-weight: 700; font-size: 1.1rem; box-shadow: 0 2px 12px 0 rgba(118,71,236,0.10); border: none; text-decoration: none; transition: filter 0.18s, box-shadow 0.18s;">
-      <svg width="32" height="32" fill="none" viewBox="0 0 24 24">
-        <path
-          d="M13.172 12l-4.95-4.95a1 1 0 111.414-1.414l6.364 6.364a1 1 0 010 1.414l-6.364 6.364a1 1 0 11-1.414-1.414L13.172 12z"
-          fill="#ffffff" />
-      </svg>
-      <span style="color: #ffffff;">Ver todos os relatos</span>
-    </a>
-    <style>
-      .ver-mais-feedbacks-btn:hover,
-      .ver-mais-feedbacks-btn:focus {
-        filter: brightness(1.08) saturate(1.2);
-        box-shadow: 0 4px 18px 0 rgba(118, 71, 236, 0.18);
-        text-decoration: none;
-        color: #fff;
-      }
-
-      @media (max-width: 600px) {
-        .ver-mais-feedbacks-btn {
-          width: 100%;
-          justify-content: center;
-          font-size: 1rem;
-          padding: 12px 0;
-        }
-      }
-    </style>
   </section>
 
+  <h2
+    style="text-align: center; font-size: 2rem; font-weight: 700; margin-top: 24px; margin-bottom: 24px; background: linear-gradient(to right, #000000, #00c4f9); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">
+    Resumo
+  </h2>
+
+  <section class="sessao-parceiros" style="margin-left:auto; margin-right:auto; display:table;">
+    <div class="container">
+
+      <div class="bloco-garantia">
+        <div class="texto">
+          <h3>A triagem é um passo essencial para garantir que o seu filho entre no mercado de trabalho do jeito certo.
+          </h3>
+          <p style="text-align: left; font-size: 1.30em; line-height: 1.7;">
+            Com ela, ele não perde tempo, não se queima com as empresas e já começa do lado certo do jogo.
+
+            Estamos aqui para apoiar vocês em cada etapa e ajudar o jovem a conquistar a vaga ideal para ele.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
   <script>
     // Carrossel de depoimentos
@@ -1187,10 +1054,6 @@
     handleTestimonialArrows();
   </script>
 
-
-
-
-
   <script>
     function scrollCarousel(direction) {
       const track = document.getElementById("carousel-track");
@@ -1208,10 +1071,10 @@
       <!-- Coluna 1 -->
       <div style="flex: 1 1 220px; min-width: 220px;">
         <div class="logo-container">
-          <a href="#" style="display: inline-block;">
+          <a href="./index.html" style="display: inline-block;">
             <img src="./images/logo_jovemtech.svg" alt="Jovem Tech RP Logo">
           </a>
-          <a href="#"
+          <a href="./index.html"
             style="font-weight: 700; font-size: 1.4rem; color: #1c1c1c; line-height: 1.2; text-decoration: none;">
             Jovem<br>Tech RP
           </a>
@@ -1246,7 +1109,7 @@
       <div style="flex: 1 1 120px; min-width: 120px;">
         <h4 style="font-weight: 700; font-size: 14px; margin-bottom: 12px;">Triagem</h4>
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 13px; color: #444;">
-          <li><a href="./triagem.html" style="text-decoration: none; color: #444;">O que é triagem?</a></li>
+          <li>O que é triagem?</li>
         </ul>
       </div>
 

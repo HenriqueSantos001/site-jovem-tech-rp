@@ -1239,3 +1239,13 @@
     background-image: var(--iti-path-globe-2x);
   }
 }
+
+
+
+
+
+.mask1 {
+    -webkit-mask-box-image: url(/images/mask1.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover
+}
